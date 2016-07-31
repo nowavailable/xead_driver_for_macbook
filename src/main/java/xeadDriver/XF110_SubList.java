@@ -2136,7 +2136,7 @@ public class XF110_SubList extends JDialog implements XFScriptable {
 		String wrkStr;
 
 		XSSFWorkbook workBook = new XSSFWorkbook();
-		wrkStr = functionElement_.getAttribute("Name").replace("/", "_").replace("^", "_");
+		wrkStr = functionElement_.getAttribute("Name").replace("/", "_").replace("ï¼", "_");
 		XSSFSheet workSheet = workBook.createSheet(wrkStr);
 		workSheet.setDefaultRowHeight( (short) 300);
 		Footer workSheetFooter = workSheet.getFooter();
@@ -4845,7 +4845,7 @@ class XF110_SubListCellEditorWithMSeqBox extends JPanel implements XFTableColumn
 	private XF110_SubList dialog_ = null;
     private String language = "";
     private String[] monthArrayEn = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov"};
-    private String[] monthArrayJp = {"‚PŒ“x","‚QŒ“x","‚RŒ“x","‚SŒ“x","‚TŒ“x","‚UŒ“x","‚VŒ“x","‚WŒ“x","‚XŒ“x","10Œ“x","11Œ“x","12Œ“x","‚PŒ“x","‚QŒ“x","‚RŒ“x","‚SŒ“x","‚TŒ“x","‚UŒ“x","‚VŒ“x","‚WŒ“x","‚XŒ“x","10Œ“x","11Œ“x"};
+    private String[] monthArrayJp = {"ï¼‘æœˆåº¦","ï¼’æœˆåº¦","ï¼“æœˆåº¦","ï¼”æœˆåº¦","ï¼•æœˆåº¦","ï¼–æœˆåº¦","ï¼—æœˆåº¦","ï¼˜æœˆåº¦","ï¼™æœˆåº¦","10æœˆåº¦","11æœˆåº¦","12æœˆåº¦","ï¼‘æœˆåº¦","ï¼’æœˆåº¦","ï¼“æœˆåº¦","ï¼”æœˆåº¦","ï¼•æœˆåº¦","ï¼–æœˆåº¦","ï¼—æœˆåº¦","ï¼˜æœˆåº¦","ï¼™æœˆåº¦","10æœˆåº¦","11æœˆåº¦"};
     private int startMonth = 1;
 
 	public XF110_SubListCellEditorWithMSeqBox(XF110_SubList dialog) {

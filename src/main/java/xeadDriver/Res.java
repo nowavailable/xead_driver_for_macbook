@@ -305,7 +305,7 @@ public class Res extends java.util.ListResourceBundle {
 		{ "UserID", "User ID" },
 		{ "UserName", "User Name" },
 		{ "XLSComment1", "* Data was output into EXCEL sheet." },
-		{ "XLSComment2", "* These are subset with criteriaÅF" },
+		{ "XLSComment2", "* These are subset with criteriaÔºö" },
 		{ "XLSErrorMessage", "IOException of EXCEL data. Refer to session log for details." },
 		{ "Yes", "Yes" }
 	};

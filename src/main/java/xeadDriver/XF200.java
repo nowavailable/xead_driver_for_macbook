@@ -1794,7 +1794,7 @@ public class XF200 extends JDialog implements XFExecutable, XFScriptable {
 		FileOutputStream fileOutputStream = null;
 
 		XSSFWorkbook workBook = new XSSFWorkbook();
-		String wrkStr = functionElement_.getAttribute("Name").replace("/", "_").replace("Å^", "_");
+		String wrkStr = functionElement_.getAttribute("Name").replace("/", "_").replace("Ôºè", "_");
 		XSSFSheet workSheet = workBook.createSheet(wrkStr);
 		workSheet.setDefaultRowHeight((short)1000);
 		Footer workSheetFooter = workSheet.getFooter();

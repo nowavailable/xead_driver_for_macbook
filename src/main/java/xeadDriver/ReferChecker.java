@@ -941,7 +941,7 @@ public class ReferChecker extends Object {
 //					}
 //				}
 //			} catch (Exception e) {
-//				JOptionPane.showMessageDialog(null, "ERROR IN SCRIPT("+ getName() + " " + scriptNameRunning + ")\n" +e.getMessage()); // TODO ©“®¶¬‚³‚ê‚½ catch ƒuƒƒbƒN
+//				JOptionPane.showMessageDialog(null, "ERROR IN SCRIPT("+ getName() + " " + scriptNameRunning + ")\n" +e.getMessage()); // TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸ catch ãƒ–ãƒ­ãƒƒã‚¯
 //			}
 //		}
 //		//

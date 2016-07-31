@@ -790,7 +790,7 @@ public class XFTableOperator {
 					}
 
 				} catch (Exception e) {
-					String message = "HttpClient error with DB server.Å@Session is aborted.";
+					String message = "HttpClient error with DB server.„ÄÄSession is aborted.";
 					if (logBuf_ != null) {
 						XFUtility.appendLog(message + "\n" + e.getMessage(), logBuf_);
 					}
@@ -876,12 +876,12 @@ public class XFTableOperator {
 //					}
 //
 //				} catch(Exception ex) {
-////					String message = "HttpClient error with DB server.Å@Session is aborted.";
+////					String message = "HttpClient error with DB server.„ÄÄSession is aborted.";
 ////					if (logBuf_ != null) {
 ////						XFUtility.appendLog(message + "\n" + ex.getMessage(), logBuf_);
 ////					}
 ////					throw new Exception(message + "\n" + ex.getMessage());
-//					JOptionPane.showMessageDialog(null, "HttpClient error with DB server.Å@Session is aborted.");
+//					JOptionPane.showMessageDialog(null, "HttpClient error with DB server.„ÄÄSession is aborted.");
 //					System.exit(0);
 //
 //				} finally {

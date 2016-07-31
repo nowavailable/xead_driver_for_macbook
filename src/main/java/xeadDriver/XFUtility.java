@@ -1338,13 +1338,13 @@ public class XFUtility {
 		if (editCode.equals("g1")) {
 			integerFormat = new DecimalFormat("#.##0;-#.##0");
 		}
-		//j0 1,234,567.0000£
+		//j0 1,234,567.0000â–²
 		if (editCode.equals("j0")) {
-			integerFormat = new DecimalFormat("#,##0;#,##0£");
+			integerFormat = new DecimalFormat("#,##0;#,##0â–²");
 		}
-		//j1 £1,234,567.0000
+		//j1 â–²1,234,567.0000
 		if (editCode.equals("j1")) {
-			integerFormat = new DecimalFormat("#,##0;£#,##0");
+			integerFormat = new DecimalFormat("#,##0;â–²#,##0");
 		}
 
 		return integerFormat.format(value);
@@ -1425,40 +1425,40 @@ public class XFUtility {
 				floatFormat = new DecimalFormat("#.##0,00000;-#.##0,00000");
 			}
 		}
-		//j0 1,234,567.0000£
+		//j0 1,234,567.0000â–²
 		if (editCode.equals("j0")) {
 			if (decimal == 1) {
-				floatFormat = new DecimalFormat("#,##0.0;#,##0.0£");
+				floatFormat = new DecimalFormat("#,##0.0;#,##0.0â–²");
 			}
 			if (decimal == 2) {
-				floatFormat = new DecimalFormat("#,##0.00;#,##0.00£");
+				floatFormat = new DecimalFormat("#,##0.00;#,##0.00â–²");
 			}
 			if (decimal == 3) {
-				floatFormat = new DecimalFormat("#,##0.000;#,##0.000£");
+				floatFormat = new DecimalFormat("#,##0.000;#,##0.000â–²");
 			}
 			if (decimal == 4) {
-				floatFormat = new DecimalFormat("#,##0.0000;#,##0.0000£");
+				floatFormat = new DecimalFormat("#,##0.0000;#,##0.0000â–²");
 			}
 			if (decimal >= 5) {
-				floatFormat = new DecimalFormat("#,##0.00000;#,##0.00000£");
+				floatFormat = new DecimalFormat("#,##0.00000;#,##0.00000â–²");
 			}
 		}
-		//j1 £1,234,567.0000
+		//j1 â–²1,234,567.0000
 		if (editCode.equals("j1")) {
 			if (decimal == 1) {
-				floatFormat = new DecimalFormat("#,##0.0;£#,##0.0");
+				floatFormat = new DecimalFormat("#,##0.0;â–²#,##0.0");
 			}
 			if (decimal == 2) {
-				floatFormat = new DecimalFormat("#,##0.00;£#,##0.00");
+				floatFormat = new DecimalFormat("#,##0.00;â–²#,##0.00");
 			}
 			if (decimal == 3) {
-				floatFormat = new DecimalFormat("#,##0.000;£#,##0.000");
+				floatFormat = new DecimalFormat("#,##0.000;â–²#,##0.000");
 			}
 			if (decimal == 4) {
-				floatFormat = new DecimalFormat("#,##0.0000;£#,##0.0000");
+				floatFormat = new DecimalFormat("#,##0.0000;â–²#,##0.0000");
 			}
 			if (decimal >= 5) {
-				floatFormat = new DecimalFormat("#,##0.00000;#,£##0.00000");
+				floatFormat = new DecimalFormat("#,##0.00000;#,â–²##0.00000");
 			}
 		}
 
@@ -1473,17 +1473,17 @@ public class XFUtility {
 		//en11 Thur,Jun17,2001
 		//
 		//jp00 10/06/17
-		//jp01 10/06/17(–Ø)
+		//jp01 10/06/17(æœ¨)
 		//jp10 2010/06/17
-		//jp11 2010/06/17(–Ø)
-		//jp20 2010”N6ŒŽ17“ú
-		//jp21 2010”N6ŒŽ17“ú(–Ø)
+		//jp11 2010/06/17(æœ¨)
+		//jp20 2010å¹´6æœˆ17æ—¥
+		//jp21 2010å¹´6æœˆ17æ—¥(æœ¨)
 		//jp30 H22/06/17
-		//jp31 H22/06/17(…)
-		//jp40 H22”N06ŒŽ17“ú 
-		//jp41 H22”N06ŒŽ17“ú(…)
-		//jp50 •½¬22”N06ŒŽ17“ú
-		//jp51 •½¬22”N06ŒŽ17“ú(…)
+		//jp31 H22/06/17(æ°´)
+		//jp40 H22å¹´06æœˆ17æ—¥ 
+		//jp41 H22å¹´06æœˆ17æ—¥(æ°´)
+		//jp50 å¹³æˆ22å¹´06æœˆ17æ—¥
+		//jp51 å¹³æˆ22å¹´06æœˆ17æ—¥(æ°´)
 
 		Calendar cal = Calendar.getInstance();
 		if (date != null) { 
@@ -1552,9 +1552,9 @@ public class XFUtility {
 
 		if (dateFormat.equals("jp20") || dateFormat.equals("jp21")) {
 			if (isWithTime) {
-				formatter = new SimpleDateFormat("yyyy”NMMŒŽdd“ú HH:mm");
+				formatter = new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ HH:mm");
 			} else {
-				formatter = new SimpleDateFormat("yyyy”NMMŒŽdd“ú");
+				formatter = new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥");
 			}
 			buf.append(formatter.format(cal.getTime()));
 			if (dateFormat.equals("jp21")) {
@@ -1576,9 +1576,9 @@ public class XFUtility {
 
 		if (dateFormat.equals("jp40") || dateFormat.equals("jp41")) {
 			if (isWithTime) {
-				formatter = new SimpleDateFormat("Gyy”NMMŒŽdd“ú HH:mm", new Locale("ja", "JP", "JP"));
+				formatter = new SimpleDateFormat("Gyyå¹´MMæœˆddæ—¥ HH:mm", new Locale("ja", "JP", "JP"));
 			} else {
-				formatter = new SimpleDateFormat("Gyy”NMMŒŽdd“ú", new Locale("ja", "JP", "JP"));
+				formatter = new SimpleDateFormat("Gyyå¹´MMæœˆddæ—¥", new Locale("ja", "JP", "JP"));
 			}
 			buf.append(formatter.format(cal.getTime()));
 			if (dateFormat.equals("jp41")) {
@@ -1588,9 +1588,9 @@ public class XFUtility {
 
 		if (dateFormat.equals("jp50") || dateFormat.equals("jp51")) {
 			if (isWithTime) {
-				formatter = new SimpleDateFormat("GGGGyy”NMMŒŽdd“ú HH:mm", new Locale("ja", "JP", "JP"));
+				formatter = new SimpleDateFormat("GGGGyyå¹´MMæœˆddæ—¥ HH:mm", new Locale("ja", "JP", "JP"));
 			} else {
-				formatter = new SimpleDateFormat("GGGGyy”NMMŒŽdd“ú", new Locale("ja", "JP", "JP"));
+				formatter = new SimpleDateFormat("GGGGyyå¹´MMæœˆddæ—¥", new Locale("ja", "JP", "JP"));
 			}
 			buf.append(formatter.format(cal.getTime()));
 			if (dateFormat.equals("jp51")) {
@@ -1636,10 +1636,10 @@ public class XFUtility {
 					image.scaleToFit(newWidth, newHeight);
 				} else {
 					if (newWidth > 0) {
-						percentWidth = newWidth / image.getWidth() * 100.0f;
+						percentWidth = newWidth / image.width() * 100.0f;
 					}
 					if (newHeight > 0) {
-						percentHeight = newHeight / image.getHeight() * 100.0f;
+						percentHeight = newHeight / image.height() * 100.0f;
 					}
 					if (percentWidth < percentHeight) {
 						image.scalePercent(percentWidth);
@@ -1737,9 +1737,9 @@ public class XFUtility {
 			if (size.equals("B5")) {
 				rec = PageSize.B5.rotate();
 			}
-			if (size.equals("B6")) {
-				rec = PageSize.B6.rotate();
-			}
+//			if (size.equals("B6")) {
+//				rec = PageSize.B6.rotate();
+//			}
 		} else {
 			if (size.equals("A2")) {
 				rec = PageSize.A2;
@@ -1769,9 +1769,9 @@ public class XFUtility {
 			if (size.equals("B5")) {
 				rec = PageSize.B5;
 			}
-			if (size.equals("B6")) {
-				rec = PageSize.B6;
-			}
+//			if (size.equals("B6")) {
+//				rec = PageSize.B6;
+//			}
 		}
 
 		return rec;
@@ -1901,37 +1901,37 @@ public class XFUtility {
 			width = metrics.stringWidth("10/06/17");
 		}
 		if (dateFormat.equals("jp01")) {
-			width = metrics.stringWidth("10/06/17(–Ø)");
+			width = metrics.stringWidth("10/06/17(æœ¨)");
 		}
 		if (dateFormat.equals("jp10")) {
 			width = metrics.stringWidth("2010/06/17");
 		}
 		if (dateFormat.equals("jp11")) {
-			width = metrics.stringWidth("2010/06/17(–Ø)");
+			width = metrics.stringWidth("2010/06/17(æœ¨)");
 		}
 		if (dateFormat.equals("jp20")) {
-			width = metrics.stringWidth("2010”N6ŒŽ17“ú");
+			width = metrics.stringWidth("2010å¹´6æœˆ17æ—¥");
 		}
 		if (dateFormat.equals("jp21")) {
-			width = metrics.stringWidth("2010”N6ŒŽ17“ú(–Ø)");
+			width = metrics.stringWidth("2010å¹´6æœˆ17æ—¥(æœ¨)");
 		}
 		if (dateFormat.equals("jp30")) {
 			width = metrics.stringWidth("H22/06/17");
 		}
 		if (dateFormat.equals("jp31")) {
-			width = metrics.stringWidth("H22/06/17(–Ø)");
+			width = metrics.stringWidth("H22/06/17(æœ¨)");
 		}
 		if (dateFormat.equals("jp40")) {
-			width = metrics.stringWidth("H22”N06ŒŽ17“ú");
+			width = metrics.stringWidth("H22å¹´06æœˆ17æ—¥");
 		}
 		if (dateFormat.equals("jp41")) {
-			width = metrics.stringWidth("H22”N06ŒŽ17“ú(–Ø)");
+			width = metrics.stringWidth("H22å¹´06æœˆ17æ—¥(æœ¨)");
 		}
 		if (dateFormat.equals("jp50")) {
-			width = metrics.stringWidth("•½¬22”N06ŒŽ17“ú");
+			width = metrics.stringWidth("å¹³æˆ22å¹´06æœˆ17æ—¥");
 		}
 		if (dateFormat.equals("jp51")) {
-			width = metrics.stringWidth("•½¬22”N06ŒŽ17“ú(–Ø)");
+			width = metrics.stringWidth("å¹³æˆ22å¹´06æœˆ17æ—¥(æœ¨)");
 		}
 
 		return width + 10;
@@ -1945,17 +1945,17 @@ public class XFUtility {
 		//en11 Thur,Jun17,2001
 		//
 		//jp00 10/06/17
-		//jp01 10/06/17(–Ø)
+		//jp01 10/06/17(æœ¨)
 		//jp10 2010/06/17
-		//jp11 2010/06/17(–Ø)
-		//jp20 2010”N6ŒŽ17“ú
-		//jp21 2010”N6ŒŽ17“ú(–Ø)
+		//jp11 2010/06/17(æœ¨)
+		//jp20 2010å¹´6æœˆ17æ—¥
+		//jp21 2010å¹´6æœˆ17æ—¥(æœ¨)
 		//jp30 H22/06/17
-		//jp31 H22/06/17(…)
-		//jp40 H22”N06ŒŽ17“ú
-		//jp41 H22”N06ŒŽ17“ú(…)
-		//jp50 •½¬22”N06ŒŽ17“ú
-		//jp51 •½¬22”N06ŒŽ17“ú(…)
+		//jp31 H22/06/17(æ°´)
+		//jp40 H22å¹´06æœˆ17æ—¥
+		//jp41 H22å¹´06æœˆ17æ—¥(æ°´)
+		//jp50 å¹³æˆ22å¹´06æœˆ17æ—¥
+		//jp51 å¹³æˆ22å¹´06æœˆ17æ—¥(æ°´)
 
 		String result = "";
 
@@ -1979,7 +1979,7 @@ public class XFUtility {
 					|| dateFormat.equals("jp11")
 					|| dateFormat.equals("jp20")
 					|| dateFormat.equals("jp21")) {
-				formatter = new SimpleDateFormat("yyyy”NMMŒŽ", new Locale("ja", "US", "US"));
+				formatter = new SimpleDateFormat("yyyyå¹´MMæœˆ", new Locale("ja", "US", "US"));
 				result = formatter.format(cal.getTime());
 			}
 			if (dateFormat.equals("jp30")
@@ -1988,7 +1988,7 @@ public class XFUtility {
 					|| dateFormat.equals("jp41")
 					|| dateFormat.equals("jp50")
 					|| dateFormat.equals("jp51")) {
-				formatter = new SimpleDateFormat("Gyy”NMMŒŽ", new Locale("ja", "JP", "JP"));
+				formatter = new SimpleDateFormat("Gyyå¹´MMæœˆ", new Locale("ja", "JP", "JP"));
 				result = formatter.format(cal.getTime());
 			}
 		}
@@ -2013,7 +2013,7 @@ public class XFUtility {
 					|| dateFormat.equals("jp11")
 					|| dateFormat.equals("jp20")
 					|| dateFormat.equals("jp21")) {
-				formatter = new SimpleDateFormat("yyyy”N“x", new Locale("ja", "US", "US"));
+				formatter = new SimpleDateFormat("yyyyå¹´åº¦", new Locale("ja", "US", "US"));
 				result = formatter.format(cal.getTime());
 			}
 			if (dateFormat.equals("jp30")
@@ -2022,7 +2022,7 @@ public class XFUtility {
 					|| dateFormat.equals("jp41")
 					|| dateFormat.equals("jp50")
 					|| dateFormat.equals("jp51")) {
-				formatter = new SimpleDateFormat("Gyy”N“x", new Locale("ja", "JP", "JP"));
+				formatter = new SimpleDateFormat("Gyyå¹´åº¦", new Locale("ja", "JP", "JP"));
 				result = formatter.format(cal.getTime());
 			}
 		}
@@ -2037,7 +2037,7 @@ public class XFUtility {
 			language = dateFormat.substring(0, 2);
 		}
 	    String[] monthArrayEn = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov"};
-	    String[] monthArrayJp = {"‚PŒŽ“x","‚QŒŽ“x","‚RŒŽ“x","‚SŒŽ“x","‚TŒŽ“x","‚UŒŽ“x","‚VŒŽ“x","‚WŒŽ“x","‚XŒŽ“x","10ŒŽ“x","11ŒŽ“x","12ŒŽ“x","‚PŒŽ“x","‚QŒŽ“x","‚RŒŽ“x","‚SŒŽ“x","‚TŒŽ“x","‚UŒŽ“x","‚VŒŽ“x","‚WŒŽ“x","‚XŒŽ“x","10ŒŽ“x","11ŒŽ“x"};
+	    String[] monthArrayJp = {"ï¼‘æœˆåº¦","ï¼’æœˆåº¦","ï¼“æœˆåº¦","ï¼”æœˆåº¦","ï¼•æœˆåº¦","ï¼–æœˆåº¦","ï¼—æœˆåº¦","ï¼˜æœˆåº¦","ï¼™æœˆåº¦","10æœˆåº¦","11æœˆåº¦","12æœˆåº¦","ï¼‘æœˆåº¦","ï¼’æœˆåº¦","ï¼“æœˆåº¦","ï¼”æœˆåº¦","ï¼•æœˆåº¦","ï¼–æœˆåº¦","ï¼—æœˆåº¦","ï¼˜æœˆåº¦","ï¼™æœˆåº¦","10æœˆåº¦","11æœˆåº¦"};
 		String result = "";
 		int startMonth = 1;
 		startMonth = session.getSystemVariantInteger("FIRST_MONTH");
@@ -2346,7 +2346,7 @@ public class XFUtility {
 
 		if (dayOfWeek == 1) {
 			if (language.equals("jp")) {
-				result = "(“ú)";
+				result = "(æ—¥)";
 			}
 			if (language.equals("en")) {
 				result = "Sun,";
@@ -2354,7 +2354,7 @@ public class XFUtility {
 		}
 		if (dayOfWeek == 2) {
 			if (language.equals("jp")) {
-				result = "(ŒŽ)";
+				result = "(æœˆ)";
 			}
 			if (language.equals("en")) {
 				result = "Mon,";
@@ -2362,7 +2362,7 @@ public class XFUtility {
 		}
 		if (dayOfWeek == 3) {
 			if (language.equals("jp")) {
-				result = "(‰Î)";
+				result = "(ç«)";
 			}
 			if (language.equals("en")) {
 				result = "Tue,";
@@ -2370,7 +2370,7 @@ public class XFUtility {
 		}
 		if (dayOfWeek == 4) {
 			if (language.equals("jp")) {
-				result = "(…)";
+				result = "(æ°´)";
 			}
 			if (language.equals("en")) {
 				result = "Wed,";
@@ -2378,7 +2378,7 @@ public class XFUtility {
 		}
 		if (dayOfWeek == 5) {
 			if (language.equals("jp")) {
-				result = "(–Ø)";
+				result = "(æœ¨)";
 			}
 			if (language.equals("en")) {
 				result = "Thur,";
@@ -2386,7 +2386,7 @@ public class XFUtility {
 		}
 		if (dayOfWeek == 6) {
 			if (language.equals("jp")) {
-				result = "(‹à)";
+				result = "(é‡‘)";
 			}
 			if (language.equals("en")) {
 				result = "Fri,";
@@ -2394,7 +2394,7 @@ public class XFUtility {
 		}
 		if (dayOfWeek == 7) {
 			if (language.equals("jp")) {
-				result = "(“y)";
+				result = "(åœŸ)";
 			}
 			if (language.equals("en")) {
 				result = "Sat,";
@@ -5768,7 +5768,7 @@ class XFYMonthBox extends JPanel implements XFEditableField {
 					jTextField.setText(jComboBoxMonth.getItemAt(jComboBoxMonth.getSelectedIndex()).toString() + ", " + jComboBoxYear.getItemAt(jComboBoxYear.getSelectedIndex()).toString());
 				}
 				if (language.equals("jp")) {
-					jTextField.setText(jComboBoxYear.getItemAt(jComboBoxYear.getSelectedIndex()).toString() + "”N" + jComboBoxMonth.getItemAt(jComboBoxMonth.getSelectedIndex()).toString() + "ŒŽ");
+					jTextField.setText(jComboBoxYear.getItemAt(jComboBoxYear.getSelectedIndex()).toString() + "å¹´" + jComboBoxMonth.getItemAt(jComboBoxMonth.getSelectedIndex()).toString() + "æœˆ");
 				}
 			}
 		}
@@ -5984,7 +5984,7 @@ class XFMSeqBox extends JPanel implements XFEditableField {
     private Session session_;
     private String language = "";
     private String[] monthArrayEn = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov"};
-    private String[] monthArrayJp = {"‚PŒŽ“x","‚QŒŽ“x","‚RŒŽ“x","‚SŒŽ“x","‚TŒŽ“x","‚UŒŽ“x","‚VŒŽ“x","‚WŒŽ“x","‚XŒŽ“x","10ŒŽ“x","11ŒŽ“x","12ŒŽ“x","‚PŒŽ“x","‚QŒŽ“x","‚RŒŽ“x","‚SŒŽ“x","‚TŒŽ“x","‚UŒŽ“x","‚VŒŽ“x","‚WŒŽ“x","‚XŒŽ“x","10ŒŽ“x","11ŒŽ“x"};
+    private String[] monthArrayJp = {"ï¼‘æœˆåº¦","ï¼’æœˆåº¦","ï¼“æœˆåº¦","ï¼”æœˆåº¦","ï¼•æœˆåº¦","ï¼–æœˆåº¦","ï¼—æœˆåº¦","ï¼˜æœˆåº¦","ï¼™æœˆåº¦","10æœˆåº¦","11æœˆåº¦","12æœˆåº¦","ï¼‘æœˆåº¦","ï¼’æœˆåº¦","ï¼“æœˆåº¦","ï¼”æœˆåº¦","ï¼•æœˆåº¦","ï¼–æœˆåº¦","ï¼—æœˆåº¦","ï¼˜æœˆåº¦","ï¼™æœˆåº¦","10æœˆåº¦","11æœˆåº¦"};
     private int startMonth = 1;
     private int value_ = 0;
 	private int oldValue_ = 0;
@@ -6857,13 +6857,13 @@ class XFCalendar extends JDialog {
 			jLabelSat.setText("Sat");
 		}
 		if (language.equals("jp")) {
-			jLabelSun.setText("“ú");
-			jLabelMon.setText("ŒŽ");
-			jLabelTue.setText("‰Î");
-			jLabelWed.setText("…");
-			jLabelThu.setText("–Ø");
-			jLabelFri.setText("‹à");
-			jLabelSat.setText("“y");
+			jLabelSun.setText("æ—¥");
+			jLabelMon.setText("æœˆ");
+			jLabelTue.setText("ç«");
+			jLabelWed.setText("æ°´");
+			jLabelThu.setText("æœ¨");
+			jLabelFri.setText("é‡‘");
+			jLabelSat.setText("åœŸ");
 		}
 
 		int posX = 2;
@@ -6900,8 +6900,8 @@ class XFCalendar extends JDialog {
 		calendarForToday.setTime(new Date());
 
 		try {
-			SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy'”N'MM'ŒŽ'dd'“ú'");
-			String str1 = "9999”N12ŒŽ31“ú";
+			SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy'å¹´'MM'æœˆ'dd'æ—¥'");
+			String str1 = "9999å¹´12æœˆ31æ—¥";
 			maxValueDate = sdf1.parse(str1);
 		} catch (ParseException e1) {
 			e1.printStackTrace();
@@ -7062,17 +7062,17 @@ class XFCalendar extends JDialog {
 		//en11 Thur,Jun17,2001
 		//
 		//jp00 10/06/17
-		//jp01 10/06/17(–Ø)
+		//jp01 10/06/17(æœ¨)
 		//jp10 2010/06/17
-		//jp11 2010/06/17(–Ø)
-		//jp20 2010”N6ŒŽ17“ú
-		//jp21 2010”N6ŒŽ17“ú(–Ø)
+		//jp11 2010/06/17(æœ¨)
+		//jp20 2010å¹´6æœˆ17æ—¥
+		//jp21 2010å¹´6æœˆ17æ—¥(æœ¨)
 		//jp30 H22/06/17
-		//jp31 H22/06/17(…)
-		//jp40 H22”N06ŒŽ17“ú
-		//jp41 H22”N06ŒŽ17“ú(…)
-		//jp50 •½¬22”N06ŒŽ17“ú
-		//jp51 •½¬22”N06ŒŽ17“ú(…)
+		//jp31 H22/06/17(æ°´)
+		//jp40 H22å¹´06æœˆ17æ—¥
+		//jp41 H22å¹´06æœˆ17æ—¥(æ°´)
+		//jp50 å¹³æˆ22å¹´06æœˆ17æ—¥
+		//jp51 å¹³æˆ22å¹´06æœˆ17æ—¥(æ°´)
 
 		String result = "";
 		String dateFormat = session_.getDateFormat();
@@ -7090,7 +7090,7 @@ class XFCalendar extends JDialog {
 				|| dateFormat.equals("jp11")
 				|| dateFormat.equals("jp20")
 				|| dateFormat.equals("jp21")) {
-			formatter = new SimpleDateFormat("yyyy”N MŒŽ");
+			formatter = new SimpleDateFormat("yyyyå¹´ Mæœˆ");
 			result = formatter.format(cal.getTime());
 		}
 		if (dateFormat.equals("jp30")
@@ -7099,7 +7099,7 @@ class XFCalendar extends JDialog {
 				|| dateFormat.equals("jp41")
 				|| dateFormat.equals("jp50")
 				|| dateFormat.equals("jp51")) {
-			formatter = new SimpleDateFormat("GGGGy”N MŒŽ", new Locale("ja", "JP", "JP"));
+			formatter = new SimpleDateFormat("GGGGyå¹´ Mæœˆ", new Locale("ja", "JP", "JP"));
 			result = formatter.format(cal.getTime());
 		}
 

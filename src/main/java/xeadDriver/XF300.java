@@ -2232,7 +2232,7 @@ public class XF300 extends JDialog implements XFExecutable, XFScriptable {
 		 String wrkStr;
 
 		 XSSFWorkbook workBook = new XSSFWorkbook();
-		 wrkStr = functionElement_.getAttribute("Name").replace("/", "_").replace("Å^", "_");
+		 wrkStr = functionElement_.getAttribute("Name").replace("/", "_").replace("Ôºè", "_");
 		 XSSFSheet workSheet = workBook.createSheet(wrkStr);
 		 workSheet.setDefaultRowHeight( (short) 300);
 		 Footer workSheetFooter = workSheet.getFooter();
